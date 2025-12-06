@@ -1,22 +1,6 @@
 #include "../../Header/Basic.h"
 using namespace std;
 
-vector<LL>read(const string_view& s){
-	vector<LL>r;
-	LL x=0;
-	for(auto c:s){
-		if(isdigit(c)){
-			x=x*10+c-'0';
-		}
-		else{
-			if(x) r.emplace_back(x);
-			x=0;
-		}
-	}
-	if(x) r.emplace_back(x);
-	return r;
-}
-
 int main(){
 #ifndef LOCAL
 	cin.tie(nullptr)->sync_with_stdio(false);
